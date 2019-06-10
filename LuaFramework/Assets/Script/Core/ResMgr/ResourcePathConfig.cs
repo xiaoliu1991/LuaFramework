@@ -109,7 +109,7 @@ public class ResourcePathConfig : ScriptableObject, ISerializationCallbackReceiv
         ResPathInfo info = null;
         if (resPathInfoMap.TryGetValue(resName, out info))
         {
-            return resAbNameList[resPathInfoMap[resName].resAbNameIndex] + AssetBundleDef.ABSuffix;
+            return resAbNameList[resPathInfoMap[resName].resAbNameIndex] + AssetBundleDef.ABName;
         }
         return string.Empty;
     }

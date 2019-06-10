@@ -17,6 +17,7 @@ public static class LuaBinder
 		LogWrap.Register(L);
 		UtilWrap.Register(L);
 		ResourcesManagerWrap.Register(L);
+		UnitySingleton_ResourcesManagerWrap.Register(L);
 		L.BeginModule("LuaInterface");
 		LuaInterface_LuaInjectionStationWrap.Register(L);
 		LuaInterface_InjectTypeWrap.Register(L);

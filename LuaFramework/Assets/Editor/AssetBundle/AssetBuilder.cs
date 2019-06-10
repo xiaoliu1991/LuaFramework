@@ -40,6 +40,7 @@ public class AssetBuilder
         BuildAssetBundles(exportPath, EditorUserBuildSettings.activeBuildTarget, LZ4Options);
 
         EditorUtil.OpenFolderAndSelectFile(exportPath);
+        CopyAssetBundleToStreamingAssets();
     }
 
 
@@ -342,7 +343,7 @@ public class AssetBuilder
     /// 拷贝AssetBundle到StreamingAssets
     /// </summary>
     /// <param name="games"></param>
-    public static void CopyAssetBundleToStreamingAssets(string[] games, bool updateVersionFile)
+    public static void CopyAssetBundleToStreamingAssets(bool updateVersionFile = true)
     {
         string exportPath = GetExportPath(EditorUserBuildSettings.activeBuildTarget);
         string streamingPath = GetStreamingAssetPath(EditorUserBuildSettings.activeBuildTarget);
@@ -351,14 +352,8 @@ public class AssetBuilder
             FileUtils.DeletePath(streamingPath);
         }
         Directory.CreateDirectory(streamingPath);
-        string inPath;
-        string outPath;
-        for (int i = 0; i < games.Length; i++)
-        {
-            inPath = exportPath + "/" + games[i].ToLower();
-            outPath = streamingPath + "/" + games[i].ToLower();
-            FileUtils.CopyDir(inPath, outPath);
-        }
+        FileUtils.CopyDir(exportPath, streamingPath);
+        AssetDatabase.Refresh();
         //ClearManifest(streamingPath);
 //        CopyResourceFiles();
 //        if (updateVersionFile) UpdateVersionFile(games);

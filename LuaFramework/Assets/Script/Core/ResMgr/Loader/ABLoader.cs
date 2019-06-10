@@ -140,10 +140,10 @@ public class ABLoader : ResourcesLoader
     /// </summary>
     void InitResPathConfig()
     {
-        string path = string.Format("ResConfigs").ToLower() + AssetBundleDef.ABSuffix;
+        string path = (string.Format("ResConfig/ResourceConfig") + AssetBundleDef.ABName).ToLower();
         string fullPath = Paths.GetFullPath(path);
         AssetBundle ab = AssetBundle.LoadFromFile(fullPath);
-        ResPathConfig = ab.LoadAsset<ResourcePathConfig>("ResourcePathConfig");
+        ResPathConfig = ab.LoadAsset<ResourcePathConfig>("ResourceConfig");
         ab.Unload(true);
     }
 

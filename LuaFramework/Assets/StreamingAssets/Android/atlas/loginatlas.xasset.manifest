@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 2077609421
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: fa7cb8bdc234967f82daacbfdeec2fe9
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 460b4f5d62b6facbccf7c01637df8f00
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/Atlas/LoginAtlas/Login_Button.png
+- Assets/Resources/Atlas/LoginAtlas/DiKuang.png
+- Assets/Resources/Atlas/LoginAtlas/Login_XuanZe010.png
+- Assets/Resources/Atlas/LoginAtlas/BTN_TXT_ZHDengLu.png
+- Assets/Resources/Atlas/LoginAtlas/DaFaYuLe.png
+- Assets/Resources/Atlas/LoginAtlas/Login_XuanZe020.png
+- Assets/Resources/Atlas/LoginAtlas/BG.jpg
+Dependencies: []

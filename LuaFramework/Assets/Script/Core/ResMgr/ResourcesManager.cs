@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using LuaInterface;
+using UnityEngine;
 using UnityEngine.Events;
 
 public class ResourcesManager : UnitySingleton<ResourcesManager>
@@ -7,6 +8,7 @@ public class ResourcesManager : UnitySingleton<ResourcesManager>
 
     public void Init(bool useAb)
     {
+        AssetBundleManager.Inst.Init();
         if (useAb)
             mLoader = new ABLoader();
         else
@@ -35,16 +37,16 @@ public class ResourcesManager : UnitySingleton<ResourcesManager>
         return LoadAsset<Object>(assetName);
     }
 
+    [NoToLua]
     public T LoadAsset<T>(string assetName) where T : Object
     {
         return mLoader.LoadAsset<T>(assetName);
     }
-
+    [NoToLua]
     public void LoadAssetAsync<T>(string assetName, UnityAction<string, T> action) where T : Object
     {
         mLoader.LoadAssetAsyn<T>(assetName, action);
     }
-
 
 #if UNITY_EDITOR
     public override void Update()

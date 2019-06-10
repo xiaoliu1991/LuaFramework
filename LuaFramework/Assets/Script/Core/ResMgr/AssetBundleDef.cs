@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class AssetBundleDef
 {
+    public static string ABName = ".XAsset";
     public static string ABSuffix = "XAsset";
     /// <summary>
     /// 资源配置文件路径
