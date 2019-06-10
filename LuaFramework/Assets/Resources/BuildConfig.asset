@@ -18,3 +18,5 @@ MonoBehaviour:
   OneAssetOneBundle:
   - asset: {fileID: 102900000, guid: c0b582513d3e3a04690856bcc832947b, type: 3}
     compressType: 1
+  - asset: {fileID: 102900000, guid: e53acf83d823b3041a674d470d71a23d, type: 3}
+    compressType: 2

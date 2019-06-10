@@ -209,7 +209,7 @@ public class AssetBuilder
     public static string GetAssetBundleName(string path, CompressType compressType)
     {
         string assetBundleName = path.Replace("Resources/", string.Empty);
-        assetBundleName = assetBundleName.Insert(assetBundleName.IndexOf("/") + 1, compressType.ToString() + "/");
+        //assetBundleName = assetBundleName.Insert(assetBundleName.IndexOf("/") + 1, compressType.ToString() + "/");
         return assetBundleName;
     }
 

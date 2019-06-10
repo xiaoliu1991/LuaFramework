@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1432444350
+CRC: 4016713453
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 2667907d1196c8782efcf9373c266fb1
+    Hash: 8faad3abf41350a3e6bc59fa58290db1
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 6fefa86ef1391c6ceda793ec5d724cab
+    Hash: df102782b869a6503a9a1ce854618cdb
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -18,17 +18,17 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 - Class: 114
-  Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-- Class: 114
-  Script: {fileID: 575553740, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-- Class: 114
-  Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-- Class: 114
   Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 - Class: 114
   Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 - Class: 114
   Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 114
+  Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+- Class: 114
+  Script: {fileID: 575553740, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+- Class: 114
+  Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 128
@@ -42,4 +42,4 @@ ClassTypes:
 Assets:
 - Assets/Resources/UI/Modules/LoginView/LoginView.prefab
 Dependencies:
-- E:/MyGithub/LuaFramework/BuildABs/Android/atlas/lz4/loginatlas.xasset
+- E:/MyGithub/LuaFramework/BuildABs/Android/atlas/loginatlas.xasset

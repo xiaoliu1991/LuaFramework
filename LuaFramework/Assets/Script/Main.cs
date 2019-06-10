@@ -12,14 +12,32 @@
             return LuaManager.Inst;
         }
     }
+    /// <summary>
+    /// Lua管理器
+    /// </summary>
+    public static ResourcesManager ResMgr
+    {
+        get
+        {
+            return ResourcesManager.Inst;
+        }
+    }
 
     public LogLevel log;
+
+    /// <summary>
+    /// 是否使用AB包模式
+    /// </summary>
+    public bool IsAb = false;
 
     public override void Awake()
     {
         base.Awake();
         Inst = this;
         Log.level = log;
+
+
+        ResMgr.Init(IsAb);
         LuaMgr.StartMain();
     }
 
