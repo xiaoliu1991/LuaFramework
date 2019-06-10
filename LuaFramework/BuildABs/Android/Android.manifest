@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 1662978790
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: atlas/lz4/loginatlas.xasset
+      Dependencies: {}
+    Info_1:
+      Name: ui/lzma/modules/bagview/baginfoview.xasset
+      Dependencies: {}
+    Info_2:
+      Name: ui/lzma/modules/bagview/bagview.xasset
+      Dependencies: {}
+    Info_3:
+      Name: ui/lzma/modules/loginview/loginview.xasset
+      Dependencies:
+        Dependency_0: atlas/lz4/loginatlas.xasset
+    Info_4:
+      Name: ui/lzma/modules/mainview/mainview.xasset
+      Dependencies: {}
