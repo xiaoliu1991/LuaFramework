@@ -23,4 +23,11 @@ public class CommonEditor
         }
 
     }
+
+    [MenuItem("FUnityExtends/UnityUtils/Test %#&T")]
+    public static void Test()
+    {
+        ResourcesPathEditor.CreateRsourcePathConfig();
+    }
+
 }

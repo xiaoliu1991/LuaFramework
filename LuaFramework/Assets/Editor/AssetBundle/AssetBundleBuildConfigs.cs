@@ -47,7 +47,7 @@ public class AssetBundleBuildConfig
     [SerializeField]
     DefaultAsset asset;
 
-    [SerializeField]
+//    [SerializeField]
     /// <summary>
     /// 压缩类型
     /// </summary>

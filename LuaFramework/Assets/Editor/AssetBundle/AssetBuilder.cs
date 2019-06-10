@@ -29,7 +29,7 @@ public class AssetBuilder
         }
     }
 
-    public static List<string> IgnoreList = new List<string>(){"~"};
+    public static List<string> IgnoreList = new List<string>(){ "~", "BuildConfig" };
 
     public static void ExcuteBuild()
     {
@@ -290,6 +290,33 @@ public class AssetBuilder
                 break;
         }
         return Application.dataPath.Replace("Assets", "BuildABs/" + floder);
+    }  
+    
+    
+    /// <summary>
+    /// 获取流媒体目录
+    /// </summary>
+    /// <param name="target"></param>
+    /// <returns></returns>
+    public static string GetStreamingAssetPath(BuildTarget target)
+    {
+        string floder = "Other";
+        switch (target)
+        {
+            case BuildTarget.Android:
+                floder = "Android";
+                break;
+            case BuildTarget.iOS:
+                floder = "IOS";
+                break;
+            case BuildTarget.StandaloneWindows:
+                floder = "Windows";
+                break;
+            case BuildTarget.StandaloneWindows64:
+                floder = "Windows";
+                break;
+        }
+        return Application.streamingAssetsPath + "/" + floder;
     }
 
 
@@ -299,7 +326,7 @@ public class AssetBuilder
     /// </summary>
     /// <param name="path"></param>
     /// <returns></returns>
-    private static bool IsIgnore(string path)
+    public static bool IsIgnore(string path)
     {
         for (int i = 0; i < IgnoreList.Count; i++)
         {
@@ -307,5 +334,33 @@ public class AssetBuilder
                 return true;
         }
         return false;
+    }
+
+
+
+    /// <summary>
+    /// 拷贝AssetBundle到StreamingAssets
+    /// </summary>
+    /// <param name="games"></param>
+    public static void CopyAssetBundleToStreamingAssets(string[] games, bool updateVersionFile)
+    {
+        string exportPath = GetExportPath(EditorUserBuildSettings.activeBuildTarget);
+        string streamingPath = GetStreamingAssetPath(EditorUserBuildSettings.activeBuildTarget);
+        if (Directory.Exists(streamingPath))
+        {
+            FileUtils.DeletePath(streamingPath);
+        }
+        Directory.CreateDirectory(streamingPath);
+        string inPath;
+        string outPath;
+        for (int i = 0; i < games.Length; i++)
+        {
+            inPath = exportPath + "/" + games[i].ToLower();
+            outPath = streamingPath + "/" + games[i].ToLower();
+            FileUtils.CopyDir(inPath, outPath);
+        }
+        //ClearManifest(streamingPath);
+//        CopyResourceFiles();
+//        if (updateVersionFile) UpdateVersionFile(games);
     }
 }

@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e38c2d788c39824da3f7686eb999fb1, type: 3}
+  m_Name: ResourceConfig
+  m_EditorClassIdentifier: 
+  resAbNameList:
+  - atlas/loginatlas
+  - resconfig/resourcesconfig
+  - ui/modules/bagview/baginfoview
+  - ui/modules/bagview/bagview
+  - ui/modules/loginview/loginview
+  - ui/modules/mainview/mainview
+  resPathList:
+  - Assets/Resources/
+  - Assets/Resources/Atlas/LoginAtlas
+  - Assets/Resources/ResConfig
+  - Assets/Resources/UI/Modules/BagView
+  - Assets/Resources/UI/Modules/LoginView
+  - Assets/Resources/UI/Modules/MainView
+  resInfoList:
+  - resName: BG
+    extension: .jpg
+    resPathIndex: 1
+    resAbNameIndex: 0
+  - resName: BTN_TXT_ZHDengLu
+    extension: .png
+    resPathIndex: 1
+    resAbNameIndex: 0
+  - resName: DaFaYuLe
+    extension: .png
+    resPathIndex: 1
+    resAbNameIndex: 0
+  - resName: DiKuang
+    extension: .png
+    resPathIndex: 1
+    resAbNameIndex: 0
+  - resName: Login_Button
+    extension: .png
+    resPathIndex: 1
+    resAbNameIndex: 0
+  - resName: Login_XuanZe010
+    extension: .png
+    resPathIndex: 1
+    resAbNameIndex: 0
+  - resName: Login_XuanZe020
+    extension: .png
+    resPathIndex: 1
+    resAbNameIndex: 0
+  - resName: ResourceConfig
+    extension: .asset
+    resPathIndex: 2
+    resAbNameIndex: 1
+  - resName: BagInfoView
+    extension: .prefab
+    resPathIndex: 3
+    resAbNameIndex: 2
+  - resName: BagView
+    extension: .prefab
+    resPathIndex: 3
+    resAbNameIndex: 3
+  - resName: LoginView
+    extension: .prefab
+    resPathIndex: 4
+    resAbNameIndex: 4
+  - resName: MainView
+    extension: .prefab
+    resPathIndex: 5
+    resAbNameIndex: 5
+  assetBundleList:
+  - assetBundleName: atlas/loginatlas.xasset
+    dependences: []
+  - assetBundleName: resconfig/resourcesconfig.xasset
+    dependences: []
+  - assetBundleName: ui/modules/bagview/baginfoview.xasset
+    dependences: []
+  - assetBundleName: ui/modules/bagview/bagview.xasset
+    dependences: []
+  - assetBundleName: ui/modules/loginview/loginview.xasset
+    dependences:
+    - atlas/loginatlas.xasset
+  - assetBundleName: ui/modules/mainview/mainview.xasset
+    dependences: []

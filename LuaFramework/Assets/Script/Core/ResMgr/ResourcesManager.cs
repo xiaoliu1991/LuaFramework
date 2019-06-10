@@ -44,4 +44,13 @@ public class ResourcesManager : UnitySingleton<ResourcesManager>
     {
         mLoader.LoadAssetAsyn<T>(assetName, action);
     }
+
+
+#if UNITY_EDITOR
+    public override void Update()
+    {
+        base.Update();
+        if(null != mLoader)mLoader.Update();
+    }
+#endif
 }

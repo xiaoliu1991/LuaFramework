@@ -275,6 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   log: 0
+  IsAb: 1
 --- !u!4 &1076169743
 Transform:
   m_ObjectHideFlags: 0

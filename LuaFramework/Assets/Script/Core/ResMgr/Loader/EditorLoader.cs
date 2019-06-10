@@ -1,11 +1,20 @@
 ﻿using System;
+using UnityEngine;
 using UnityEngine.Events;
 
 public class EditorLoader : ResourcesLoader
 {
     public override void Init()
     {
-        throw new NotImplementedException();
+        InitResPathConfig();
+    }
+
+    /// <summary>
+    /// 初始化资源路径配置
+    /// </summary>
+    void InitResPathConfig()
+    {
+        ResPathConfig = Resources.Load<ResourcePathConfig>("ResConfig/ResourcePathConfig");
     }
 
     public override void Update()

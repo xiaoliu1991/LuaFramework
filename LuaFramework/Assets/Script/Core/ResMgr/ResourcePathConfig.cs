@@ -8,7 +8,11 @@ using System.Collections.Generic;
 [System.Serializable]
 [CreateAssetMenu(menuName = "自定义/资源路径配置文件")]
 public class ResourcePathConfig : ScriptableObject, ISerializationCallbackReceiver
-{
+{    /// <summary>
+    /// 资源隶属AssetBundle的名称
+    /// </summary>
+    [SerializeField]
+    private List<string> resAbNameList;
     /// <summary>
     /// string空数组
     /// </summary>
@@ -18,11 +22,6 @@ public class ResourcePathConfig : ScriptableObject, ISerializationCallbackReceiv
     /// </summary>
     [SerializeField]
     private List<string> resPathList;
-    /// <summary>
-    /// 资源隶属AssetBundle的名称
-    /// </summary>
-    [SerializeField]
-    private List<string> resAbNameList;
     /// <summary>
     /// 资源信息列表只用于生成Json序列化
     /// </summary>
